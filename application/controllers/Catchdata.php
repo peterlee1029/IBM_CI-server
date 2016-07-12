@@ -251,7 +251,8 @@ class Catchdata extends Rest_Controller {
 			case "應用日文學系":
 				break;
 			case "時尚設計學系":
-				$str=file_get_contents("http://114.35.237.112/CI/index.php/EnternalAPI/catchstudata");
+				$str=file_get_contents("http://192.168.3.108/CI/index.php/EnternalAPI/catchstudata");
+//				$str=file_get_contents("http://114.35.237.112/CI/index.php/EnternalAPI/catchstudata");
 				echo $str;	
 				break;
 			case "資訊管理學系":
@@ -427,7 +428,7 @@ class Catchdata extends Rest_Controller {
 				break;
 			case "時尚設計學系":
 				$query=urlencode($keyword);
-				$arr=file_get_contents("http://114.35.237.112/CI/index.php/EnternalAPI/searchprojectlikename?keys=$query");
+				$arr=file_get_contents("http://192.168.3.108/CI/index.php/EnternalAPI/searchprojectlikename?keys=$query");
 				$arr1=json_decode($arr);
 				echo urldecode(json_encode($arr1));
 				break;
@@ -484,7 +485,7 @@ class Catchdata extends Rest_Controller {
 				break;
 			case "時尚設計學系":
 			
-				$str=file_get_contents('http://114.35.237.112/CI/index.php/EnternalAPI/sortdata');
+				$str=file_get_contents('http://192.168.3.108/CI/index.php/EnternalAPI/sortdata');
 				$str1=json_decode($str);
 				echo urldecode(json_encode($str1));
 			
@@ -562,7 +563,7 @@ class Catchdata extends Rest_Controller {
 				break;
 			case "時尚設計學系":
 				$query=urlencode($keys);
-				$arr=file_get_contents("http://114.35.237.112/CI/index.php/EnternalAPI/catchdetail?keys=$query");
+				$arr=file_get_contents("http://192.168.3.108/CI/index.php/EnternalAPI/catchdetail?keys=$query");
 				$arr1=json_decode($arr);
 				$group="";
 				$tot=array(
@@ -670,7 +671,7 @@ class Catchdata extends Rest_Controller {
 				break;
 			case "時尚設計學系":
 				$query=urlencode($keys);
-				$arr=file_get_contents("http://114.35.237.112/CI/index.php/EnternalAPI/catchdetail?keys=$query");
+				$arr=file_get_contents("http://192.168.3.108/CI/index.php/EnternalAPI/catchdetail?keys=$query");
 				$arr1=json_decode($arr);
 				$group="";
 				$tot=array(

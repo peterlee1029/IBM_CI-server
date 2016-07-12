@@ -1,0 +1,12 @@
+body
+{
+	background-color:#AAAAAA;
+}
+/*類別css*/
+.img-icon
+{
+	border-radius:10px;
+}
+.ui-table-columntoggle-btn {
+display:none !important;
+}

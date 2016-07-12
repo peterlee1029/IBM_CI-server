@@ -307,6 +307,7 @@ class EnternalAPI extends Rest_Controller
 	 }
 	
 	public function checklogin_post(){
+		log_message('debug','Some variable was correctly set');
 		$oPostdata = file_get_contents("php://input");
 		$data = json_decode($oPostdata);
 		$identify=$data->identify;
