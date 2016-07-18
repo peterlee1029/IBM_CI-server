@@ -17,7 +17,7 @@
   </head>
   <body ng-controller="controll as ctrl">
 	<script>
-		var url = "http://192.168.2.104/IBM_CI/index.php/";
+		var url = "http://192.168.3.108/IBM_CI/index.php/";
 //		var url = "http://192.168.3.112/IBM_CI/index.php/";
 		console.log('click me.');
 		$(function(){
