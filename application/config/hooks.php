@@ -1,6 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------------
 | Hooks
@@ -11,12 +9,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
 */
-		$hook['pre_controller']=array(
-		'class' => 'Catchuser',
-		'function' => 'show',
-		'filename'=>'Catchuser.php',
-		'filepath'=>'/hooks',
-		'params'=>''
-	);
-
-?>
+//$hook['post_controller_constructor'] = array(
+$hook['post_controller_constructor'] = array(
+ 'class'  => 'LogHook',
+ 'function' => 'setDbReady',
+ 'filename' => 'LogHook.php',
+ 'filepath' => 'hooks',
+ 'params' => true,
+); 
+/*
+$hook['post_controller'] = array(
+ 'class'  => 'LogHook',
+ 'function' => 'setDbReady',
+ 'filename' => 'LogHook.php',
+ 'filepath' => 'hooks',
+ 'params' => false,
+); 
+*/
+/* End of file hooks.php */
+/* Location: ./application/config/hooks.php */
